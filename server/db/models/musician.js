@@ -13,12 +13,12 @@ module.exports = (sequelize, DataTypes) => {
       // Your code here
       Musician.belongsTo(
         models.Band,
-        {foreignKey: 'bandId'},
+        { foreignKey: 'bandId' },
       )
 
       Musician.belongsToMany(
         models.Instrument,
-        {through: models.MusicianInstrument}
+        { through: models.MusicianInstrument }
       )
     }
   };
